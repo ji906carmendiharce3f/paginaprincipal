@@ -31,10 +31,26 @@
     </nav>
 
     <header>
-        <video class="w-100" autoplay loop muted>
-            <source src="./videos/video.mp4" type="video/mp4" />
-        </video>
+
+        <div class="video-container">
+            <video  autoplay loop muted>
+                <source src="./videos/video.mp4" type="video/mp4" />
+            </video>
+             
+        </div>
     </header>
+
+    <style>
+        .video-container {
+          max-width: 100%; 
+          height: auto; 
+          overflow: hidden; 
+        }
+        .video-container video {
+          width: 100%; 
+          height: auto;
+        }
+      </style>
 
     <br>
 
@@ -182,6 +198,34 @@
         </div>
     </section>
     <br>
+
+    <script>
+        window.onload = function() {
+       
+          var initialWidth = window.innerWidth;
+          var initialHeight = window.innerHeight;
+      
+          var videoContainer = document.querySelector('.video-container');
+          var video = videoContainer.querySelector('video');
+      
+        
+          videoContainer.style.width = initialWidth + 'px';
+          videoContainer.style.height = initialHeight + 'px';
+          video.style.width = initialWidth + 'px';
+          video.style.height = initialHeight + 'px';
+      
+          
+          window.onresize = function() {
+            var currentWidth = window.innerWidth;
+            var currentHeight = window.innerHeight;
+            
+            videoContainer.style.width = currentWidth + 'px';
+            videoContainer.style.height = currentHeight + 'px';
+            video.style.width = currentWidth + 'px';
+            video.style.height = currentHeight + 'px';
+          };
+        };
+      </script>
     <footer style="background-color: #ABC339; text-align: center; font-family: 'Georgia'; font-size:medium" ;>
         <p>Realizado por Rocio Sierra. Todos los derechos reservados. Copyright 2024©</p>
     </footer>
