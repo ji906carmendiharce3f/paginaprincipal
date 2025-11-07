@@ -160,3 +160,46 @@ video {
   object-fit: contain;
   /* Ajusta el video para que se ajuste dentro del contenedor sin distorsión */
 }
+#podcast-container {
+  width: 100%;
+  margin: 0%;
+  padding: 0%;
+}
+
+
+section.episode {
+  background-color: #fa931d;
+  margin-bottom: 25px;
+  padding: 1px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+section.episode h2 {
+  margin-top: 1%;
+  font-size: 1.5em;
+ 
+}
+
+section.episode p {
+  font-size: 1em;
+  color: #006505;
+}
+
+audio {
+  width: 100%;
+  margin-top: 15px;
+  height: 60px;
+ 
+}
+audio::-internal-media-controls-download-button {
+    display: none;
+}
+
+audio::-webkit-media-controls-enclosure {
+    overflow: hidden;
+}
+
+audio::-webkit-media-controls-panel {
+    width: calc(100% - 30px); /* Ajusta si es necesario */
+}
